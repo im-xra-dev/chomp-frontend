@@ -1,0 +1,123 @@
+html {
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-flex;
+    margin-left: 5px;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    height: 25px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    transition-duration: 0.5s;
+}
+.btn:hover {
+    background: rgba(0, 7, 54, 0.61);
+}
+
+.list {
+    display: none;
+}
+#backgrounds-list {
+    display: block;
+}
+
+#save-profile-pic {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+
+    left: 50%;
+    margin-left: -25px;
+    top: 260px;
+
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+
+    text-align: center;
+    line-height: 30px;
+}
+
+.preview {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: contain;
+    border-radius: 100%;
+}
+
+.list-preview {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    background-size: contain;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.list-preview:hover {
+    border: 1px solid black;
+    margin: 4px;
+}
+
+#preview-box {
+    top: 50px;
+    border: 1px solid black;
+}
+
+#list-box {
+    position: absolute;
+    left: 202px;
+    top: 50px;
+    height: 200px;
+    width: calc(100% - 200px);
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+#backgrounds {
+    background-image: url('/src/img/profile/defaults/backgrounds/0.png');
+}
+
+#skin {
+    background-image: url('/src/img/profile/defaults/skin/0.png');
+}
+
+#face {
+    background-image: url('/src/img/profile/defaults/face.png');
+}
+
+#eyes {
+    background-image: url('/src/img/profile/defaults/eyes/0.png');
+}
+
+#hair {
+    background-image: url('/src/img/profile/defaults/hair/0.png');
+}
+
+#t-shirt {
+    background-image: url('/src/img/profile/defaults/t-shirt/0.png');
+}
+
+#left-hand {
+    background-image: url('/src/img/profile/defaults/left-hand/0.png');
+}
+
+#right-hand {
+    background-image: url('/src/img/profile/defaults/right-hand/0.png');
+}
+
+#legs {
+    background-image: url('/src/img/profile/defaults/legs/0.png');
+}
+
+#logo {
+    background-image: url('/src/img/profile/defaults/logo/0.png');
+}
+
+#outline {
+    background-image: url('/src/img/profile/defaults/outline.png');
+}

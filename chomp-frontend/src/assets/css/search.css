@@ -1,0 +1,50 @@
+#button-container {
+    width: 80%;
+    position: absolute;
+    left: calc(10%);
+    top: 50px;
+    height: 25px;
+}
+.main-content {
+    top: 75px;
+}
+
+.btn {
+    transition-duration: 0.5s;
+}
+
+.btn:hover {
+    box-shadow: inset -1px -14px 20px -20px #00632b;
+}
+
+#post-btn {
+    background: rgb(61, 255, 7);
+}
+#post-btn:after {
+    /*padding: 0 5px 0 0;*/
+    /*vertical-align: middle;*/
+    content: 'Search Posts';
+    left: calc(50% - 45px);
+    position: relative;
+}
+
+#tag-btn {
+    background: rgb(89, 255, 39);
+}
+#tag-btn:hover {
+    background: rgb(61, 255, 7);
+}
+#tag-btn:before {
+    content: 'Search Tags';
+    left: calc(50% - 45px);
+    position: relative;
+}
+
+#user-btn {
+    background: rgb(61, 255, 7);
+}
+#user-btn:before {
+    content: 'Search Users';
+    left: calc(50% - 45px);
+    position: relative;
+}

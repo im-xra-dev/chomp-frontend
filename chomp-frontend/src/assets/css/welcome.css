@@ -1,0 +1,21 @@
+#pfp-iframe {
+    position: absolute;
+    width: 675px;
+    height: 300px;
+
+    left: 50%;
+    margin-left: calc(690px / -2);
+    top: 225px;
+
+    outline: none;
+    border: none;
+}
+
+#pfp-close {
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgba(5, 0, 255, 0.23);
+    color: #9e9e9e;
+}

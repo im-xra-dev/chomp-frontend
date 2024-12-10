@@ -1,0 +1,20 @@
+#container {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -150px;
+    text-align: center;
+}
+
+#title {
+    color: darkgreen;
+}
+
+#username {
+}
+#password {
+}
