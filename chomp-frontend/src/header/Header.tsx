@@ -1,21 +1,41 @@
 import * as React from 'react';
-import './header.css';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
+import CHOMP from '../assets/images/temp chomp logo.png';
 
 export function Header() {
-    return (
-        <div className="header">
-            <div className="left">
-                <input id="site-search"></input>
-            </div>
-            <Link to="/" data-testid="header-home">
-                <div className="center logo">
-                    <div className="clickable-div" />
-                </div>
-            </Link>
-            <div className="right">
-                <div id="profile-settings">TODO</div>
-            </div>
+  return (
+    <header className="flex items-center justify-between w-full px-6 py-4 bg-black shadow">
+      {/* Left: Search bar */}
+      <div className="flex-1">
+        <input
+          id="site-search"
+          type="text"
+          placeholder="Search..."
+          className="w-full max-w-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-400"
+        />
+      </div>
+
+      {/* Center: Logo */}
+      <div className="flex-1 text-center">
+        <Link to="/" data-testid="header-home" className="text-xl font-bold">
+            <img
+              src={CHOMP}
+              alt={"CHOMP Logo"}
+              className="h-20 align-middle inline-block"
+            />
+        </Link>
+      </div>
+
+      {/* Right: Profile icon */}
+      <div className="flex-1 flex justify-end">
+        <div
+          id="profile-settings"
+          className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+        >
+          👤
         </div>
-    );
+      </div>
+    </header>
+  );
 }
