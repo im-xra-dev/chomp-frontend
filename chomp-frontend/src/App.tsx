@@ -1,27 +1,22 @@
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import {Header} from './header/Header';
-import {SideBar} from './side-bar/SideBar';
 import {Footer} from './footer/Footer';
 import {ContentProvider} from './content-provider/ContentProvider';
 import * as React from "react";
-import {ContentPart} from "./content-part/ContentPart";
-import {ContentFull} from "./content-full/ContentFull";
-
-// import './App.css'
 
 function App() {
     return (
         <>
             <BrowserRouter>
-            {/* <div className="min-h-screenw-full"> */}
-            <div className="h-100 w-full">
-                <Header />
-                <ContentProvider/>
-                <Footer/>
-                {/* Add other components/content here */}
-            </div>
+                {/* <div className="min-h-screenw-full"> */}
+                <div className="flex flex-col min-h-full">
+                    <Header />
+                    <div className="flex-grow">
+                        <ContentProvider />
+                    </div>
+                    <Footer/>
+                </div>
                 
-                {/* <ContentProvider/> */}
                 {/* <Routes> */}
                     {/*showing content (full length pages)*/}
                     {/* <Route path="/" element={<ContentFull/>}>
