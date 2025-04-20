@@ -45,7 +45,7 @@ export function SideBar() {
     return (
         <div
             id="side-bar"
-            className={`h-screen ${
+            className={`h-auto ${
                 isOpen ? 'w-80' : 'w-26'
             } relative transition-all duration-300 z-10 p-4 pr-5 bg-black`}
         >
