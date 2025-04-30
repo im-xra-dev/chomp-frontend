@@ -7,7 +7,7 @@ export function ContentFull() {
             <div
                 data-testid="mcf"
                 id="main-content-full"
-                className="main-content"
+                className="main-content h-50 bg-red"
             >
                 <Outlet />
             </div>
