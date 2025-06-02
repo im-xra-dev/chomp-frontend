@@ -1,0 +1,48 @@
+src/
+│
+├── assets/
+│   └── images/
+├── components/
+│   └── UI/
+│
+│
+├── data/
+│   ├── dummyCommunities.ts
+│   └── dummyUsers.ts
+│
+├── features/
+│   ├── sidebar/
+│   │   ├── SideBar.tsx
+│   │   ├── SidebarFollowedCommunity.tsx
+│   │   ├── SidebarFollowedUser.tsx
+│   │   └── SideBarItem.tsx
+│   ├── post-feed/
+│   │   ├── PostFeed.tsx
+│   │   └── PostItem.tsx
+│   ├── auth/
+│   │   └── LoginForm.tsx
+│   ├── footer/
+│   │   └── Footer.tsx
+│   └── header/
+│       └── Header.tsx
+│
+├── hooks/
+│
+├── layouts/
+│   ├── MainLayout.tsx
+│   ├── AuthLayout.tsx
+│   └── SettingsLayout.tsx
+│
+├── pages/
+│   ├── HomePage.tsx
+│   ├── LoginPage.tsx
+│   └── SettingsPage.tsx
+│
+├── App.css
+├── App.tsx.
+├── index.css
+├── main.tsx
+├── types.ts
+└── vite-env.d.ts
+
+index.html
