@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom';
-import { Community } from '../types';
+import { User } from '../../types';
 
-type SidebarFollowedCommunityProps = {
-  comm: Community;
+type SidebarFollowedUserProps = {
+    user: User;
   isOpen: boolean;
 };
 
-export function SidebarFollowedCommunity({ comm, isOpen }: SidebarFollowedCommunityProps) {
+export function SidebarFollowedUser({ user, isOpen }: SidebarFollowedUserProps) {
   return (
     <li className="flex items-center space-x-3">
       <Link
-        to={`/community/${comm.id}`}
+        to={`/profile/${user.id}`}
         className={`user-link group flex items-center space-x-3 rounded-lg hover:bg-gray-700 transition-all duration-300 ${
-          isOpen ? 'p-3 w-full' : 'p-2 ml-1 justify-center'
+          isOpen ? 'p-1 w-full' : 'p-2 ml-1 justify-center'
         }`}
       >
         <img
-          src={comm.profilePicture}
-          alt={`${comm.name}'s community`}
+          src={user.profilePicture}
+          alt={`${user.name}'s user`}
           className={`rounded-full object-cover transition-all duration-300 ${
             isOpen ? 'w-8 h-8' : 'w-10 h-10'
           }`}
@@ -27,7 +27,7 @@ export function SidebarFollowedCommunity({ comm, isOpen }: SidebarFollowedCommun
             isOpen ? 'opacity-100 max-w-[200px] ml-2' : 'opacity-0 max-w-0'
           }`}
         >
-          <span className="text-white whitespace-nowrap">{comm.name}</span>
+          <span className="text-white whitespace-nowrap">{user.name}</span>
         </div>
       </Link>
     </li>

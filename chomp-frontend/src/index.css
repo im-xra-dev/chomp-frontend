@@ -91,3 +91,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.transition-width {
+  transition-property: width;
+}
+
+.transition-margin {
+  transition-property: margin-left;
+}
