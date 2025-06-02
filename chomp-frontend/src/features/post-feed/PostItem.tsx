@@ -1,7 +1,7 @@
 // PLACEHOLDER CONTENT
 
 type Post = {
-    id: number;
+    id: string;
     content: string;
   };
   
