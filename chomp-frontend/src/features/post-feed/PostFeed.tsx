@@ -1,12 +1,7 @@
 import * as React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { PostItem } from './PostItem';
-
-//this type is declared in the PostItem file, could be global instead
-type Post = {
-  id: string;
-  content: string;
-};
+import { Post } from '../types';
 
 export const PostFeed: React.FC = () => {
   //initialize states
