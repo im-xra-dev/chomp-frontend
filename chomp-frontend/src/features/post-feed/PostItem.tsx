@@ -1,6 +1,6 @@
 // PLACEHOLDER CONTENT
 
-import { Post } from '../types';
+import { Post } from '../../types';
   
   export const PostItem = ({ post }: { post: Post }) => {
     return (
