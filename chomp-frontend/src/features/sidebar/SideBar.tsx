@@ -5,36 +5,33 @@ import { useEffect } from 'react';
 import { SidebarFollowedCommunity } from './SidebarFollowedCommunity';
 import { SidebarFollowedUser } from './SidebarFollowedUser';
 
-import { dummyUsers } from '../data/dummyUsers';
-import { dummyCommunities } from '../data/dummyCommunities';
+import { dummyUsers } from '../../data/dummyUsers';
+import { dummyCommunities } from '../../data/dummyCommunities';
 
-import sidebarEdgeImage from "../assets/images/sidebar-edge-2.png";
+import sidebarEdgeImage from "../../assets/images/sidebar-edge-2.png";
 
-export function SideBar() {
-    const [isOpen, setIsOpen] = useState(true);
-    const toggleSidebar = () => setIsOpen(!isOpen);
+import { useHeaderHeight } from '../../hooks/useHeaderHeight';
 
-    useEffect(() => {
-        const handleResize = () => {
-          if (window.innerWidth < 768) {
-            setIsOpen(false);
-          } else {
-            setIsOpen(true);
-          }
-        };
-      
-        handleResize(); // check on mount
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-      }, []);
+interface SideBarProps {
+    isOpen: boolean;
+    toggleSidebar: () => void;
+  }
 
+export function SideBar({ isOpen, toggleSidebar }: SideBarProps) {
+    const headerHeight = useHeaderHeight();
     return (
+
         <div
-            id="side-bar"
-            className={`h-auto ${
-                isOpen ? 'w-80' : 'w-26'
-            } relative transition-all duration-300 z-10 p-4 pr-5 bg-black`}
+        id="side-bar"
+        style={{
+            top: `${headerHeight}px`,
+            height: `calc(100vh - ${headerHeight}px)`,
+        }}
+        className={`fixed left-0 ${
+            isOpen ? 'w-72' : 'w-26'
+        } transition-width duration-300 z-20 p-4 pr-5 bg-black`}
         >
+
             <button
                 onClick={toggleSidebar}
                 className="w-17 text-white text-xl mb-6 focus:outline-none bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4 overflow-hidden"

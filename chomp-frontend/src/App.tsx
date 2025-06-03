@@ -1,49 +1,44 @@
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
-import {Header} from './header/Header';
-import {Footer} from './footer/Footer';
-import {ContentProvider} from './content-provider/ContentProvider';
-import * as React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import * as React from 'react';
+import { MainLayout } from './layouts/MainLayout';
+import { AuthLayout } from './layouts/AuthLayout';
+import { SettingsLayout } from './layouts/SettingsLayout';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import SettingsPage from './pages/SettingsPage';
 
 function App() {
-    return (
-        <>
-            <BrowserRouter>
-                {/* <div className="min-h-screenw-full"> */}
-                <div className="flex flex-col min-h-full">
-                    <Header />
-                    <div className="flex-grow">
-                        <ContentProvider />
-                    </div>
-                    <Footer/>
-                </div>
-                
-                {/* <Routes> */}
-                    {/*showing content (full length pages)*/}
-                    {/* <Route path="/" element={<ContentFull/>}>
-                        <Route index/>
-                        <Route path="search/"/>
-                        <Route path="s/:id/"/>
-                        <Route
-                            path="post/:postid/"
-                        />
-                        <Route path="profile/">
-                            <Route index/>
-                            <Route path=":uname/"/>
-                        </Route>
-                    </Route> */}
-                    {/*submitting content (half length pages)*/}
-                    {/* <Route path="/" element={<ContentPart/>}>
-                        <Route path="/login"/>
-                        <Route path="/signup"/>
-                        <Route path="post/">
-                            <Route index/>
-                            <Route path=":postid/comment/"/>
-                        </Route>
-                    </Route> */}
-                {/* </Routes> */}
-            </BrowserRouter>
-        </>
-    )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <HomePage />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <AuthLayout>
+              <LoginPage />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <SettingsLayout>
+              <SettingsPage />
+            </SettingsLayout>
+          }
+        />
+        {/* Add more routes here */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
