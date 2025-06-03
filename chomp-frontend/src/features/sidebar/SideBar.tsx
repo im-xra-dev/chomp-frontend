@@ -18,24 +18,7 @@ interface SideBarProps {
   }
 
 export function SideBar({ isOpen, toggleSidebar }: SideBarProps) {
-    // const [isOpen, setIsOpen] = useState(true);
-    // const toggleSidebar = () => setIsOpen(!isOpen);
     const headerHeight = useHeaderHeight();
-
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //       if (window.innerWidth < 768) {
-    //         setIsOpen(false);
-    //       } else {
-    //         setIsOpen(true);
-    //       }
-    //     };
-      
-    //     handleResize(); // check on mount
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    //   }, []);
-
     return (
 
         <div
